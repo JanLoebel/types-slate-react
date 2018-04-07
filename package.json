@@ -27,5 +27,5 @@
     "@types/slate": "git+https://github.com/JanLoebel/types-slate.git"
   },
   "typeScriptVersion": "2.3",
-  "version": "0.33.4"
+  "version": "0.12.4"
 }
