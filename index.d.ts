@@ -1,10 +1,3 @@
-// Type definitions for Slate-React
-// Project: https://github.com/ianstormtaylor/slate
-// Definitions by: Andy Kent <https://github.com/andykent>
-//                 Jamie Talbot <https://github.com/majelbstoat>
-//                 Jan Löbel <https://github.com/JanLoebel>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.3
 declare module 'slate-react' {
   import * as Slate from 'slate'
   import * as Immutable from 'immutable'
@@ -43,7 +36,7 @@ declare module 'slate-react' {
     renderNode?: (props: RenderNodeProps) => any
     renderPlaceholder?: (props: { [key: string]: any }) => any
     renderPortal?: (props: { [key: string]: any }) => any
-    validateNode?: (node: Slate.Node) => any
+    validateNode?: (node: Node) => any
   }
 
   type BasicEditorProps = {
@@ -85,9 +78,9 @@ declare module 'slate-react' {
   type SlateType = 'fragment' | 'html' | 'node' | 'rich' | 'text'
 
   export function findDOMNode(node: Slate.Node): Element
-  export function findDOMRange(range: Slate.Range): Slate.Range
+  export function findDOMRange(range: Slate.Range): Range
   export function findNode(element: Element, value: Slate.Value): Slate.Node
-  export function findRange(selection: Slate.Selection, value: Slate.Value): Slate.Range
+  export function findRange(selection: Selection, value: Slate.Value): Slate.Range
   export function getEventRange(event: Event, value: Slate.Value): Slate.Range
   export function getEventTransfer(event: Event): { type: SlateType; node: Slate.Node }
   export function setEventTransfer(event: Event, type: SlateType, data: any): void
