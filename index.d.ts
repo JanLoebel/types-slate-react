@@ -75,7 +75,7 @@ declare module 'slate-react' {
     focus(): void
   }
 
-  type SlateType = 'fragment' | 'html' | 'node' | 'rich' | 'text'
+  type SlateType = 'fragment' | 'html' | 'node' | 'rich' | 'text' | 'files'
 
   export function findDOMNode(node: Slate.Node): Element
   export function findDOMRange(range: Slate.Range): Range
