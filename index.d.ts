@@ -3,17 +3,28 @@ declare module 'slate-react' {
   import * as Immutable from 'immutable'
   import { ReactNode } from 'react'
 
+    // Values prefixed with "data-..." (Used for spellchecking according to docs)
+  type RenderAttributes = { [key: string]: any }
+
   type RenderMarkProps = {
-    mark: { type: string }
+    attributes: RenderAttributes
     children: ReactNode
+    editor: Editor
+    mark: Slate.Mark
+    marks: Immutable.Set<Slate.Mark>
+    node: Slate.Node
+    offset: number
+    text: string
   }
 
   type RenderNodeProps = {
-    node: Slate.Block
+    attributes: RenderAttributes
     children: ReactNode
-    attributes: any
-    isSelected: boolean
     editor: Editor
+    isSelected: boolean
+    key: string
+    node: Slate.Block
+    parent: Slate.Node
   }
 
   interface Plugin {
